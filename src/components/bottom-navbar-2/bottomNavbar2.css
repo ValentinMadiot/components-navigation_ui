@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+body {
+  margin: 3rem 0 0 0;
+  font-size: 0.938rem;
+  background-color: var(hsl(174, 100%, 99%));
+  color: var(hsl(174, 8%, 35%));
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.nav2__section {
+  font-family: "Open Sans", sans-serif;
+  padding: 4.5rem 0 2rem;
+}
+
+.nav2__title {
+  font-size: 1.5rem;
+  color: hsl(174, 12%, 15%);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.nav2__height {
+  height: 100vh;
+}
+
+/*=============== LAYOUT ===============*/
+.nav2__container {
+  font-family: "Open Sans", sans-serif;
+  max-width: 968px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+/*=============== HEADER ===============*/
+.nav2__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+  transition: 0.4s;
+}
+
+/*=============== NAV ===============*/
+.nav2 {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav2__img {
+  width: 32px;
+  border-radius: 50%;
+}
+
+.nav2__logo {
+  color: hsl(174, 12%, 15%);
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .nav2__menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 -1px 12px hsla(174, 63%, 15%, 0.15);
+    width: 100%;
+    height: 4rem;
+    padding: 0 1rem;
+    display: grid;
+    align-content: center;
+    border-radius: 1.25rem 1.25rem 0 0;
+    transition: 0.4s;
+  }
+}
+
+.nav2__list,
+.nav2__link {
+  display: flex;
+}
+
+.nav2__link {
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4px;
+  color: hsl(174, 12%, 15%);
+  font-weight: 600;
+}
+
+.nav2__list {
+  justify-content: space-around;
+}
+
+.nav2__name {
+  font-size: 0.625rem;
+  /* display: none;*/ /* Minimalist design, hidden labels */
+}
+
+.nav2__icon {
+  font-size: 1.5rem;
+}
+
+/*Active link*/
+.active-link {
+  position: relative;
+  color: hsl(174, 63%, 40%);
+  transition: 0.3s;
+}
+
+/* Minimalist design, active link */
+/* .active-link::before{
+  content: '';
+  position: absolute;
+  bottom: -.5rem;
+  width: 4px;
+  height: 4px;
+  background-color: hsl(174, 63%, 40%);
+  border-radius: 50%;
+} */
+
+/* Change background header */
+.scroll-header {
+  box-shadow: 0 1px 12px hsla(174, 63%, 15%, 0.15);
+}
+
+/*=============== MEDIA QUERIES ===============*/
+/* For small devices */
+/* Remove if you choose, the minimalist design */
+@media screen and (max-width: 320px) {
+  .nav2__name {
+    display: none;
+  }
+}
+
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav2__list {
+    justify-content: center;
+    column-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  body {
+    margin: 0;
+  }
+  .nav2__section {
+    padding: 7rem 0 2rem;
+  }
+  .nav2 {
+    height: calc(3rem + 1.5rem); /* 4.5rem */
+  }
+  .nav2__img {
+    display: none;
+  }
+  .nav2__icon {
+    display: none;
+  }
+  .nav2__name {
+    font-size: 0.938rem;
+    /* display: block; */ /* Minimalist design, visible labels */
+  }
+  .nav2__link:hover {
+    color: hsl(174, 63%, 40%);
+  }
+
+  /* First design, remove if you choose the minimalist design */
+  .active-link::before {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    width: 4px;
+    height: 4px;
+    background-color: hsl(174, 63%, 40%);
+    border-radius: 50%;
+  }
+
+  /* Minimalist design */
+  /* .active-link::before{
+      bottom: -.75rem;
+  } */
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .nav2__container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 968px) {
+  .nav2__title {
+    font-size: 2.25rem;
+  }
+  .nav2__name {
+    font-size: 1rem;
+  }
+}
