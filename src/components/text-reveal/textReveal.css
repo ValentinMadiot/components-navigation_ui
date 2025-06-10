@@ -1,0 +1,27 @@
+.text-reveal h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+.text-reveal p {
+  font-size: 1.5rem;
+  color: var(--color-muted);
+}
+
+@media (max-width: 768px) {
+  .text-reveal h1 {
+    font-size: 2rem;
+  }
+  .text-reveal p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .text-reveal h1 {
+    font-size: 1.8rem;
+  }
+  .text-reveal p {
+    font-size: 1rem;
+  }
+}
