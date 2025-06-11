@@ -49,7 +49,7 @@ const BottomNavbar2 = () => {
   }, []);
 
   return (
-    <>
+    <div className="nav2__body">
       <header className="nav2__header" id="header">
         <nav className="nav2 nav2__container">
           <a href="#" className="nav2__logo">
@@ -87,6 +87,7 @@ const BottomNavbar2 = () => {
         </nav>
       </header>
 
+      {/* MAIN */}
       <main>
         {["accueil", "profil", "atouts", "projets", "contact"].map(
           (section) => (
@@ -101,7 +102,7 @@ const BottomNavbar2 = () => {
           )
         )}
       </main>
-    </>
+    </div>
   );
 };
 

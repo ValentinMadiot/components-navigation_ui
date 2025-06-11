@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 
-body {
+.nav2__body {
   margin: 3rem 0 0 0;
   font-size: 0.938rem;
   background-color: var(hsl(174, 100%, 99%));
   color: var(hsl(174, 8%, 35%));
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
 .nav2__section {
   font-family: "Open Sans", sans-serif;
   padding: 4.5rem 0 2rem;
