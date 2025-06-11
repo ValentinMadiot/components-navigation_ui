@@ -35,13 +35,13 @@ const BottomNavbar1 = () => {
 
   return (
     <div>
-      <nav className="bottom-nav1__nav">
-        <ul className="bottom-nav1__list">
+      <nav className="nav1__nav">
+        <ul className="nav1__list">
           <li>
             <a
               href="#accueil"
-              className={`bottom-nav1__link ${
-                activeLink === "home" ? "bottom-nav1__active-link" : ""
+              className={`nav1__link ${
+                activeLink === "home" ? "nav1__active-link" : ""
               }`}>
               <i className="ri-home-smile-2-line"></i>
             </a>
@@ -49,37 +49,37 @@ const BottomNavbar1 = () => {
           <li>
             <a
               href="#apropos"
-              className={`bottom-nav1__link ${
-                activeLink === "apropos" ? "bottom-nav1__active-link" : ""
+              className={`nav1__link ${
+                activeLink === "apropos" ? "nav1__active-link" : ""
               }`}>
               <i className="ri-user-line"></i>
             </a>
           </li>
           <li>
-            <button className="bottom-nav1__expand" onClick={toggleExpand}>
+            <button className="nav1__expand" onClick={toggleExpand}>
               <i
-                className={`ri-add-line bottom-nav1__expand-icon ${
-                  showList ? "bottom-nav1__rotate-icon" : ""
+                className={`ri-add-line nav1__expand-icon ${
+                  showList ? "nav1__rotate-icon" : ""
                 }`}></i>
             </button>
             <ul
-              className={`bottom-nav1__expand-list ${
-                showList ? "bottom-nav1__show-list" : ""
+              className={`nav1__expand-list ${
+                showList ? "nav1__show-list" : ""
               }`}>
               <li>
-                <a href="#" className="bottom-nav1__expand-link">
+                <a href="#" className="nav1__expand-link">
                   <i className="ri-image-2-line"></i>
                   <span>Gallerie</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="bottom-nav1__expand-link">
+                <a href="#" className="nav1__expand-link">
                   <i className="ri-archive-line"></i>
                   <span>Dossiers</span>
                 </a>
               </li>
               <li>
-                <a href="#" className="bottom-nav1__expand-link">
+                <a href="#" className="nav1__expand-link">
                   <i className="ri-bookmark-3-line"></i>
                   <span>Save</span>
                 </a>
@@ -89,8 +89,8 @@ const BottomNavbar1 = () => {
           <li>
             <a
               href="#projets"
-              className={`bottom-nav1__link ${
-                activeLink === "projets" ? "bottom-nav1__active-link" : ""
+              className={`nav1__link ${
+                activeLink === "projets" ? "nav1__active-link" : ""
               }`}>
               <i className="ri-briefcase-line"></i>
             </a>
@@ -98,8 +98,8 @@ const BottomNavbar1 = () => {
           <li>
             <a
               href="#contact"
-              className={`bottom-nav1__link ${
-                activeLink === "contact" ? "bottom-nav1__active-link" : ""
+              className={`nav1__link ${
+                activeLink === "contact" ? "nav1__active-link" : ""
               }`}>
               <i className="ri-send-plane-line"></i>
             </a>
@@ -107,20 +107,20 @@ const BottomNavbar1 = () => {
         </ul>
       </nav>
 
-      <main className="bottom-nav1__container">
-        <section className="bottom-nav1__section" id="accueil">
+      <main className="nav1__container">
+        <section className="nav1__section" id="accueil">
           <h2>ACCUEIL</h2>
         </section>
 
-        <section className="bottom-nav1__section" id="apropos">
+        <section className="nav1__section" id="apropos">
           <h2>À PROPOS</h2>
         </section>
 
-        <section className="bottom-nav1__section" id="projets">
+        <section className="nav1__section" id="projets">
           <h2>PROJETS</h2>
         </section>
 
-        <section className="bottom-nav1__section" id="contact">
+        <section className="nav1__section" id="contact">
           <h2>CONTACT</h2>
         </section>
       </main>

@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap");
 
-.bottom-nav1__container {
+.nav1__container {
   max-width: 1120px;
   margin-inline: 1.5rem;
   font-family: "Montserrat Alternates", sans-serif;
 }
 
-.bottom-nav1__section {
+.nav1__section {
   height: 100vh;
   padding-block: 2.5rem;
 }
 
-.bottom-nav1__section h2 {
+.nav1__section h2 {
   font-size: 2.5rem;
   color: hsl(225, 12%, 12%);
   text-align: center;
 }
 
-.bottom-nav1__nav {
+.nav1__nav {
   font-family: "Montserrat Alternates", sans-serif;
   position: fixed;
   bottom: 1.5rem;
@@ -32,23 +32,23 @@
   z-index: 100;
 }
 
-.bottom-nav1__list {
+.nav1__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.bottom-nav1__link {
+.nav1__link {
   color: hsl(225, 8%, 65%);
   font-size: 1.5rem;
   transition: color 0.4s;
 }
 
-.bottom-nav1__link:hover {
+.nav1__link:hover {
   color: var(--color-text);
 }
 
-.bottom-nav1__expand {
+.nav1__expand {
   border: none;
   outline: none;
   width: 40px;
@@ -58,14 +58,14 @@
   cursor: pointer;
 }
 
-.bottom-nav1__expand-icon {
+.nav1__expand-icon {
   display: inline-block;
   color: var(--white-color);
   font-size: 1.5rem;
   transition: transform 0.4s;
 }
 
-.bottom-nav1__expand-list {
+.nav1__expand-list {
   position: absolute;
   top: -4.5rem;
   left: 0;
@@ -84,22 +84,22 @@
   transition: transform 0.5s cubic-bezier(0.5, 1.8, 0.4, 0.8);
 }
 
-.bottom-nav1__expand-list li {
+.nav1__expand-list li {
   transform: translateY(-2.5rem);
   transition: transform 0.3s;
 }
 
-/* .bottom-nav1__expand-list li:nth-child(1) {
+/* .nav1__expand-list li:nth-child(1) {
   transition-delay: 0.2s;
 }
-.bottom-nav1__expand-list li:nth-child(2) {
+.nav1__expand-list li:nth-child(2) {
   transition-delay: 0.25s;
 }
-.bottom-nav1__expand-list li:nth-child(3) {
+.nav1__expand-list li:nth-child(3) {
   transition-delay: 0.3s;
 } */
 
-.bottom-nav1__expand-link {
+.nav1__expand-link {
   color: hsl(225, 8%, 65%);
   display: flex;
   flex-direction: column;
@@ -107,46 +107,46 @@
   transition: color 0.4s;
 }
 
-.bottom-nav1__expand-link i {
+.nav1__expand-link i {
   font-size: 1.5rem;
 }
 
-.bottom-nav1__expand-link span {
+.nav1__expand-link span {
   font-size: 0.625rem;
   font-weight: 600;
 }
 
-.bottom-nav1__expand-link:hover {
+.nav1__expand-link:hover {
   color: var(--white-color);
 }
 
-.bottom-nav1__show-list,
-.bottom-nav1__show-list li {
+.nav1__show-list,
+.nav1__show-list li {
   transform: translateY(0);
 }
 
-.bottom-nav1__rotate-icon {
+.nav1__rotate-icon {
   transform: rotate(135deg);
 }
 
-.bottom-nav1__active-link {
+.nav1__active-link {
   color: var(--white-color);
 }
 
 /*=============== BREAKPOINTS ===============*/
 /* For medium devices */
 @media screen and (min-width: 450px) {
-  .bottom-nav1__nav {
+  .nav1__nav {
     width: 350px;
   }
 }
 
 /* For large devices */
 @media screen and (min-width: 1150px) {
-  .bottom-nav1__container {
+  .nav1__container {
     margin-inline: auto;
   }
-  .bottom-nav1__section h2 {
+  .nav1__section h2 {
     font-size: 3.5rem;
   }
 }
