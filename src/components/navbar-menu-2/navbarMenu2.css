@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== BASE ===============*/
+.nav5__body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.938rem;
+  background-color: hsl(220, 100%, 99%);
+  color: hsl(220, 12%, 45%);
+}
+
+.nav5__container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+.nav5__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 8px hsla(220, 68%, 12%, 0.1);
+  background-color: hsl(220, 100%, 99%);
+  z-index: 100;
+}
+
+/*=============== NAV ===============*/
+.nav5 {
+  height: 3.5rem;
+}
+
+.nav5__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav5__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  color: hsl(220, 48%, 28%);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav5__logo i {
+  font-size: 1.25rem;
+}
+
+.nav5__logo:hover {
+  color: hsl(220, 68%, 54%);
+}
+
+.nav5__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav5__toggle-menu,
+.nav5__toggle-close {
+  font-size: 1.25rem;
+  color: hsl(220, 48%, 28%);
+  position: absolute;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  cursor: pointer;
+  transition: opacity 0.1s, transform 0.4s;
+}
+
+.nav5__toggle-close {
+  opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav5__menu {
+    background-color: hsl(220, 100%, 99%);
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    padding-block: 1.5rem 4rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+  }
+  .nav5__menu::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  .nav5__menu::-webkit-scrollbar-thumb {
+    background-color: hsl(220, 12%, 70%);
+  }
+}
+
+.nav5__link {
+  color: hsl(220, 48%, 28%);
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.nav5__link:hover {
+  background-color: hsl(220, 68%, 97%);
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav5__toggle-menu {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav5__toggle-close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.nav5__dropdown-button {
+  cursor: pointer;
+}
+
+.nav5__dropdown-arrow {
+  font-size: 1.5rem;
+  font-weight: initial;
+  transition: transform 0.4s;
+}
+
+.nav5__dropdown-content,
+.nav5__dropdown-group,
+.nav5__dropdown-list {
+  display: grid;
+}
+
+.nav5__dropdown-container {
+  background-color: hsl(220, 68%, 97%);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s;
+}
+
+.nav5__dropdown-content {
+  row-gap: 1.75rem;
+}
+
+.nav5__dropdown-group {
+  padding-left: 2.5rem;
+  row-gap: 0.5rem;
+}
+
+.nav5__dropdown-group:first-child {
+  margin-top: 1.25rem;
+}
+
+.nav5__dropdown-group:last-child {
+  margin-bottom: 1.25rem;
+}
+
+.nav5__dropdown-icon {
+  font-size: 1.25rem;
+  color: hsl(220, 68%, 54%);
+}
+
+.nav5__dropdown-title {
+  font-size: 0.813rem;
+  font-weight: 600;
+  color: hsl(220, 48%, 28%);
+}
+
+.nav5__dropdown-list {
+  row-gap: 0.25rem;
+}
+
+.nav5__dropdown-link {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: hsl(220, 12%, 45%);
+  transition: color 0.3s;
+}
+
+.nav5__dropdown-link:hover {
+  color: hsl(220, 48%, 28%);
+}
+
+/* Rotate dropdown icon */
+.show-dropdown .nav5__dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 300px) {
+  .nav5__dropdown-group {
+    padding-left: 1.5rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .nav5__body,
+  .nav5__dropdown-title {
+    font-size: 1rem;
+  }
+
+  .nav5__dropdown-title,
+  .nav5__dropdown-link {
+    font-size: 0.875rem;
+  }
+
+  .nav5__dropdown-link {
+    font-size: 0.813rem;
+  }
+}
+@media screen and (min-width: 1118px) {
+  /* Nav */
+  .nav5 {
+    height: calc(3.5rem + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav5__toggle {
+    display: none;
+  }
+  .nav5__list {
+    display: flex;
+    column-gap: 3rem;
+    height: 100%;
+  }
+  .nav5 li {
+    display: flex;
+  }
+  .nav5__link {
+    padding: 0;
+  }
+  .nav5__link:hover {
+    background-color: initial;
+  }
+
+  /* Dropdown */
+  .nav5__dropdown-button {
+    column-gap: 0.25rem;
+    pointer-events: none;
+  }
+  .nav5__dropdown-container {
+    height: max-content;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6.5rem;
+    background-color: hsl(220, 100%, 99%);
+    box-shadow: 0 6px 8px hsla(220, 68%, 12%, 0.05);
+    pointer-events: none;
+    opacity: 0;
+    transition: top 0.4s, opacity 0.3s;
+  }
+  .nav5__dropdown-content {
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 6rem;
+    max-width: 1120px;
+    margin-inline: auto;
+  }
+  .nav5__dropdown-group {
+    padding: 4rem 0;
+    align-content: baseline;
+    row-gap: 1.25rem;
+  }
+  .nav5__dropdown-group:first-child,
+  .nav5__dropdown-group:last-child {
+    margin: 0;
+  }
+  .nav5__dropdown-list {
+    row-gap: 0.75rem;
+  }
+  .nav5__dropdown-icon {
+    width: 60px;
+    height: 60px;
+    background-color: hsl(220, 68%, 97%);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 1rem;
+  }
+  .nav5__dropdown-icon i {
+    font-size: 2rem;
+  }
+  .nav5__dropdown-title {
+    font-size: 0.938rem;
+  }
+  .nav5__dropdown-link {
+    font-size: 0.813rem;
+  }
+  .nav5__dropdown-link:hover {
+    color: hsl(220, 68%, 54%);
+  }
+  .nav5__dropdown-item {
+    cursor: pointer;
+  }
+
+  /* Rotate dropdown icon */
+  .nav5__dropdown-item:hover .nav5__dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Show dropdown menu */
+  .nav5__dropdown-item:hover > .nav5__dropdown-container {
+    top: 5.5rem;
+    opacity: 1;
+    pointer-events: initial;
+    cursor: initial;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .nav5__container {
+    margin-inline: auto;
+  }
+}
