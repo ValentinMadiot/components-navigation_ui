@@ -4,8 +4,8 @@
 // import BottomNavbar3 from "./components/bottom-navbar-3/BottomNavbar3.jsx";
 
 // import NavbarMenu1 from "./components/navbar-menu-1/NavbarMenu1.jsx";
-import NavbarMenu2 from "./components/navbar-menu-2/NavbarMenu2.jsx";
-// import NavbarMenu3 from "./components/navbar-menu-3/NavbarMenu3.jsx";
+// import NavbarMenu2 from "./components/navbar-menu-2/NavbarMenu2.jsx";
+import AppNavbarMenu3 from "./components/navbar-menu-3/AppNavbarMenu3.jsx";
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
     // <BottomNavbar3 />
 
     // <NavbarMenu1 />
-    <NavbarMenu2 />
-    // <NavbarMenu3 />
+    // <NavbarMenu2 />
+    <AppNavbarMenu3 />
   );
 }
 
