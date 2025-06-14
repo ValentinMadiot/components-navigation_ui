@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+#nav7__body {
+  position: relative;
+  margin: 0;
+  padding: 2rem 0 0 6.75rem;
+  font-family: "Poppins", sans-serif;
+  color: #12192c;
+  font-size: 1rem;
+  transition: 0.5s;
+}
+
+/*===== l NAV =====*/
+.nav7 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 92px;
+  height: 100vh;
+  background-color: #12192c;
+  color: #fff;
+  padding: 1.5rem 1.5rem 2rem;
+  transition: 0.5s;
+  z-index: 100;
+}
+
+/*===== NAV =====*/
+.nav7__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.nav7__brand {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.nav7__toggle {
+  font-size: 1.25rem;
+  margin: 0.75rem;
+  display: grid;
+  align-items: center;
+  cursor: pointer;
+}
+.nav7__logo {
+  color: #fff;
+  font-weight: 600;
+}
+
+.nav7__link {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 0.75rem;
+  padding: 0.75rem;
+  color: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.nav7__link:hover {
+  background-color: #0c5df4;
+}
+.nav7__icon {
+  font-size: 1.25rem;
+}
+.nav7__name {
+  font-size: 0.875rem;
+}
+
+/*Expander menu*/
+.expander {
+  width: calc(92px + 9.25rem);
+}
+
+/*Active links menu*/
+.active {
+  background-color: #0c5df4;
+}
+
+/*===== COLLAPSE =====*/
+.collapse {
+  grid-template-columns: 20px max-content 1fr;
+}
+.nav7__collapse-link {
+  justify-self: flex-end;
+  transition: 0.5s;
+}
+.nav7__collapse-menu {
+  display: none;
+  padding: 0.75rem 2.25rem;
+}
+.nav7__collapse-sublink {
+  color: #b6cefc;
+  font-size: 0.875rem;
+}
+.nav7__collapse-sublink:hover {
+  color: #fff;
+}
+
+/*Show collapse*/
+.showCollapse {
+  display: block;
+}
+
+/*Rotate icon*/
+.rotate {
+  transform: rotate(180deg);
+}

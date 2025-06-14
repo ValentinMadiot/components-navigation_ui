@@ -5,7 +5,11 @@
 
 // import NavbarMenu1 from "./components/navbar-menu-1/NavbarMenu1.jsx";
 // import NavbarMenu2 from "./components/navbar-menu-2/NavbarMenu2.jsx";
-import AppNavbarMenu3 from "./components/navbar-menu-3/AppNavbarMenu3.jsx";
+// import AppNavbarMenu3 from "./components/navbar-menu-3/AppNavbarMenu3.jsx";
+
+import SidebarMenu1 from "./components/sidebar-menu-1/SidebarMenu1.jsx";
+// import SidebarMenu2 from "./components/sidebar-menu-2/SidebarMenu2.jsx";
+// import SidebarMenu3 from "./components/sidebar-menu-3/SidebarMenu3.jsx";
 
 function App() {
   return (
@@ -16,7 +20,11 @@ function App() {
 
     // <NavbarMenu1 />
     // <NavbarMenu2 />
-    <AppNavbarMenu3 />
+    // <AppNavbarMenu3 />
+
+    <SidebarMenu1 />
+    // <SidebarMenu2 />
+    // <SidebarMenu3 />
   );
 }
 
