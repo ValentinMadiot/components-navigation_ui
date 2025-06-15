@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+/*=============== BASE ===============*/
+.nav9__body {
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(248, 100%, 99%);
+  height: 100vh;
+}
+
+.nav9__main {
+  margin-inline: 6rem 1rem;
+  padding-block: 2rem;
+  color: hsl(248, 24%, 10%);
+}
+
+/*=============== SIDEBAR ===============*/
+.nav9 {
+  width: 72px;
+  height: max-content;
+  position: fixed;
+  inset: 0;
+  margin: auto 0;
+}
+
+.nav9__list {
+  position: relative;
+  background-color: hsl(248, 74%, 58%);
+  padding-block: 70px;
+  border-radius: 0 51px 51px 0;
+  display: grid;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+.nav9__link {
+  position: relative;
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 50%;
+  transition: background 0.4s;
+  font-size: 1.35rem;
+  color: #fff;
+  transition: color 0.4s;
+}
+
+.nav9__name {
+  position: absolute;
+  top: 0;
+  transform: translateX(56px);
+  background-color: hsl(248, 24%, 10%);
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 3rem;
+  pointer-events: none;
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+}
+
+.nav9__link:hover .nav9__name {
+  opacity: 1;
+  transform: translateX(48px);
+}
+
+/* Shapes */
+.nav9__circle-1,
+.nav9__circle-2 {
+  width: 80px;
+  height: 80px;
+  background-color: hsl(248, 100%, 99%);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 10;
+}
+
+.nav9__circle-1 {
+  top: -78px;
+}
+
+.nav9__circle-2 {
+  bottom: -78px;
+}
+
+.nav9__square-1,
+.nav9__square-2 {
+  width: 35px;
+  height: 40px;
+  background-color: hsl(248, 74%, 58%);
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.nav9__square-1 {
+  top: -39px;
+}
+
+.nav9__square-2 {
+  bottom: -39px;
+}
+
+/* Active link */
+.active-link {
+  background-color: #fff;
+  color: hsl(248, 74%, 58%);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav9__name {
+    font-size: 0.875rem;
+  }
+}
