@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { RiCloseLine } from "react-icons/ri";
 
 const NavbarSignup3 = ({ onClose, onSwitchToLogin }) => {
   const signupRef = useRef(null);
@@ -57,7 +58,7 @@ const NavbarSignup3 = ({ onClose, onSwitchToLogin }) => {
           </button>
         </div>
       </form>
-      <i className="ri-close-line nav6__login-close" onClick={onClose}></i>
+      <RiCloseLine className="nav6__login-close" onClick={onClose} />
     </div>
   );
 };

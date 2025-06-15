@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-import "remixicon/fonts/remixicon.css";
+import {
+  RiAddLine,
+  RiArchiveLine,
+  RiBookmark3Line,
+  RiBriefcaseLine,
+  RiHomeSmile2Line,
+  RiImage2Line,
+  RiSendPlaneLine,
+  RiUserLine,
+} from "react-icons/ri";
 import "./bottomNavbar1.css";
 
 const BottomNavbar1 = () => {
@@ -41,9 +50,9 @@ const BottomNavbar1 = () => {
             <a
               href="#accueil"
               className={`nav1__link ${
-                activeLink === "home" ? "nav1__active-link" : ""
+                activeLink === "accueil" ? "nav1__active-link" : ""
               }`}>
-              <i className="ri-home-smile-2-line"></i>
+              <RiHomeSmile2Line />
             </a>
           </li>
           <li>
@@ -52,15 +61,16 @@ const BottomNavbar1 = () => {
               className={`nav1__link ${
                 activeLink === "apropos" ? "nav1__active-link" : ""
               }`}>
-              <i className="ri-user-line"></i>
+              <RiUserLine />
             </a>
           </li>
           <li>
             <button className="nav1__expand" onClick={toggleExpand}>
-              <i
-                className={`ri-add-line nav1__expand-icon ${
+              <RiAddLine
+                className={`nav1__expand-icon ${
                   showList ? "nav1__rotate-icon" : ""
-                }`}></i>
+                }`}
+              />
             </button>
             <ul
               className={`nav1__expand-list ${
@@ -68,19 +78,19 @@ const BottomNavbar1 = () => {
               }`}>
               <li>
                 <a href="#" className="nav1__expand-link">
-                  <i className="ri-image-2-line"></i>
+                  <RiImage2Line />
                   <span>Gallerie</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="nav1__expand-link">
-                  <i className="ri-archive-line"></i>
+                  <RiArchiveLine />
                   <span>Dossiers</span>
                 </a>
               </li>
               <li>
                 <a href="#" className="nav1__expand-link">
-                  <i className="ri-bookmark-3-line"></i>
+                  <RiBookmark3Line />
                   <span>Save</span>
                 </a>
               </li>
@@ -92,7 +102,7 @@ const BottomNavbar1 = () => {
               className={`nav1__link ${
                 activeLink === "projets" ? "nav1__active-link" : ""
               }`}>
-              <i className="ri-briefcase-line"></i>
+              <RiBriefcaseLine />
             </a>
           </li>
           <li>
@@ -101,7 +111,7 @@ const BottomNavbar1 = () => {
               className={`nav1__link ${
                 activeLink === "contact" ? "nav1__active-link" : ""
               }`}>
-              <i className="ri-send-plane-line"></i>
+              <RiSendPlaneLine />
             </a>
           </li>
         </ul>

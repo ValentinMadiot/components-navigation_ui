@@ -1,4 +1,13 @@
 import { useEffect, useRef } from "react";
+import {
+  RiArrowRightSLine,
+  RiBarChart2Line,
+  RiFileList2Line,
+  RiHeartFill,
+  RiLayoutGridLine,
+  RiMailLine,
+  RiSettings3Line,
+} from "react-icons/ri";
 import "./bottomNavbar3.css";
 
 const BottomNavbar3 = () => {
@@ -8,7 +17,6 @@ const BottomNavbar3 = () => {
   const sectionsRef = useRef([]);
 
   useEffect(() => {
-    // MENU TOGGLE
     const toggle = toggleRef.current;
     const nav = navRef.current;
 
@@ -18,39 +26,28 @@ const BottomNavbar3 = () => {
         toggle.classList.toggle("rotate-icon");
       };
       toggle.addEventListener("click", handleToggle);
-
-      return () => {
-        toggle.removeEventListener("click", handleToggle);
-      };
+      return () => toggle.removeEventListener("click", handleToggle);
     }
   }, []);
 
   useEffect(() => {
-    // ACTIVE SECTION OBSERVER
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.75, // 75% visible
-    };
-
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const activeId = entry.target.id;
-          linksRef.current.forEach((link) => {
-            link.classList.remove("active-link");
-            if (link.getAttribute("href") === `#${activeId}`) {
-              link.classList.add("active-link");
-            }
-          });
-        }
-      });
-    };
-
     const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const activeId = entry.target.id;
+            linksRef.current.forEach((link) => {
+              link.classList.remove("active-link");
+              if (link.getAttribute("href") === `#${activeId}`) {
+                link.classList.add("active-link");
+              }
+            });
+          }
+        });
+      },
+      { root: null, rootMargin: "0px", threshold: 0.75 }
     );
+
     sectionsRef.current.forEach((section) => {
       if (section) observer.observe(section);
     });
@@ -63,24 +60,23 @@ const BottomNavbar3 = () => {
   }, []);
 
   const sections = [
-    { id: "Accueil", icon: "bx-grid-alt", label: "Accueil" },
-    { id: "Agenda", icon: "bx-file", label: "Agenda" },
-    { id: "Messages", icon: "bx-envelope", label: "Messages" },
-    { id: "Stats", icon: "bx-bar-chart-square", label: "Stats" },
-    { id: "Réglages", icon: "bx-cog", label: "Réglages" },
+    { id: "Accueil", icon: <RiLayoutGridLine />, label: "Accueil" },
+    { id: "Agenda", icon: <RiFileList2Line />, label: "Agenda" },
+    { id: "Messages", icon: <RiMailLine />, label: "Messages" },
+    { id: "Stats", icon: <RiBarChart2Line />, label: "Stats" },
+    { id: "Réglages", icon: <RiSettings3Line />, label: "Réglages" },
   ];
 
   return (
     <div className="nav3__body">
-      {/* NAVBAR */}
       <div className="nav3" ref={navRef}>
         <nav className="nav3__content">
           <div className="nav3__toggle" ref={toggleRef}>
-            <i className="bx bx-chevron-right"></i>
+            <RiArrowRightSLine />
           </div>
 
           <a href="#" className="nav3__logo">
-            <i className="bx bxs-heart"></i>
+            <RiHeartFill />
             <span className="nav3__logo-name">Logo</span>
           </a>
 
@@ -91,7 +87,7 @@ const BottomNavbar3 = () => {
                 key={item.id}
                 className="nav3__link"
                 ref={(el) => (linksRef.current[index] = el)}>
-                <i className={`bx ${item.icon}`}></i>
+                {item.icon}
                 <span className="nav3__name">{item.label}</span>
               </a>
             ))}
@@ -99,7 +95,6 @@ const BottomNavbar3 = () => {
         </nav>
       </div>
 
-      {/* MAIN */}
       <main>
         {sections.map((section, index) => (
           <section

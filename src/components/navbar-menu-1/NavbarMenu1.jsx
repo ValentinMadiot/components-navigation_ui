@@ -1,4 +1,20 @@
 import { useEffect } from "react";
+import {
+  RiAddLine,
+  RiArrowDownSLine,
+  RiArrowUpDownLine,
+  RiBarChartLine,
+  RiCashLine,
+  RiCloseLine,
+  RiFileListLine,
+  RiLockLine,
+  RiMenuLine,
+  RiMessage3Line,
+  RiPieChartLine,
+  RiPlanetLine,
+  RiRefund2Line,
+  RiUserLine,
+} from "react-icons/ri";
 import "./navbarMenu1.css";
 
 const NavbarMenu1 = () => {
@@ -28,12 +44,12 @@ const NavbarMenu1 = () => {
         <nav className="nav4 nav4__container">
           <div className="nav4__data">
             <a href="#" className="nav4__logo">
-              <i className="ri-planet-line"></i> Logo
+              <RiPlanetLine /> Logo
             </a>
 
             <div className="nav4__toggle" id="nav-toggle">
-              <i className="ri-menu-line nav4__burger"></i>
-              <i className="ri-close-line nav4__close"></i>
+              <RiMenuLine className="nav4__burger" />
+              <RiCloseLine className="nav4__close" />
             </div>
           </div>
 
@@ -54,40 +70,40 @@ const NavbarMenu1 = () => {
               <li className="nav4__dropdown-item">
                 <div className="nav4__link">
                   Statistiques{" "}
-                  <i className="ri-arrow-down-s-line nav4__dropdown-arrow"></i>
+                  <RiArrowDownSLine className="nav4__dropdown-arrow" />
                 </div>
                 <ul className="nav4__dropdown-menu">
                   <li>
                     <a href="#" className="nav4__dropdown-link">
-                      <i className="ri-pie-chart-line"></i> Vue d'ensemble
+                      <RiPieChartLine /> Aperçu
                     </a>
                   </li>
                   <li>
                     <a href="#" className="nav4__dropdown-link">
-                      <i className="ri-arrow-up-down-line"></i> Transactions
+                      <RiArrowUpDownLine /> Transactions
                     </a>
                   </li>
 
                   {/* Submenu */}
                   <li className="nav4__dropdown-subitem">
                     <div className="nav4__dropdown-link">
-                      <i className="ri-bar-chart-line"></i> Rapports
-                      <i className="ri-add-line nav4__dropdown-add"></i>
+                      <RiBarChartLine /> Rapports
+                      <RiAddLine className="nav4__dropdown-add" />
                     </div>
                     <ul className="nav4__dropdown-submenu">
                       <li>
                         <a href="#" className="nav4__dropdown-sublink">
-                          <i className="ri-file-list-line"></i> Documents
+                          <RiFileListLine /> Documents
                         </a>
                       </li>
                       <li>
                         <a href="#" className="nav4__dropdown-sublink">
-                          <i className="ri-cash-line"></i> Paiements
+                          <RiCashLine /> Paiements
                         </a>
                       </li>
                       <li>
                         <a href="#" className="nav4__dropdown-sublink">
-                          <i className="ri-refund-2-line"></i> Remboursements
+                          <RiRefund2Line /> Remboursements
                         </a>
                       </li>
                     </ul>
@@ -105,22 +121,22 @@ const NavbarMenu1 = () => {
               <li className="nav4__dropdown-item">
                 <div className="nav4__link">
                   Utilisateurs{" "}
-                  <i className="ri-arrow-down-s-line nav4__dropdown-arrow"></i>
+                  <RiArrowDownSLine className="nav4__dropdown-arrow" />
                 </div>
                 <ul className="nav4__dropdown-menu">
                   <li>
                     <a href="#" className="nav4__dropdown-link">
-                      <i className="ri-user-line"></i> Profils
+                      <RiUserLine /> Profils
                     </a>
                   </li>
                   <li>
                     <a href="#" className="nav4__dropdown-link">
-                      <i className="ri-lock-line"></i> Comptes
+                      <RiLockLine /> Comptes
                     </a>
                   </li>
                   <li>
                     <a href="#" className="nav4__dropdown-link">
-                      <i className="ri-message-3-line"></i> Messages
+                      <RiMessage3Line /> Messages
                     </a>
                   </li>
                 </ul>

@@ -1,4 +1,11 @@
 import { useEffect } from "react";
+import {
+  RiBook2Line,
+  RiBriefcase2Line,
+  RiHome2Line,
+  RiMailLine,
+  RiUserLine,
+} from "react-icons/ri";
 import profileImage from "./assets/img/profile.png";
 import "./bottomNavbar2.css";
 
@@ -48,6 +55,14 @@ const BottomNavbar2 = () => {
     };
   }, []);
 
+  const navItems = [
+    { id: "accueil", label: "Accueil", icon: <RiHome2Line /> },
+    { id: "profil", label: "Profil", icon: <RiUserLine /> },
+    { id: "atouts", label: "Atouts", icon: <RiBook2Line /> },
+    { id: "projets", label: "Projets", icon: <RiBriefcase2Line /> },
+    { id: "contact", label: "Contact", icon: <RiMailLine /> },
+  ];
+
   return (
     <div className="nav2__body">
       <header className="nav2__header" id="header">
@@ -58,24 +73,10 @@ const BottomNavbar2 = () => {
 
           <div className="nav2__menu" id="nav-menu">
             <ul className="nav2__list">
-              {[
-                { id: "accueil", icon: "bx-home-alt", label: "Accueil" },
-                { id: "profil", icon: "bx-user", label: "Profil" },
-                { id: "atouts", icon: "bx-book-alt", label: "Atouts" },
-                {
-                  id: "projets",
-                  icon: "bx-briefcase-alt",
-                  label: "Projets",
-                },
-                {
-                  id: "contact",
-                  icon: "bx-message-square-detail",
-                  label: "Contact",
-                },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <li className="nav2__item" key={item.id}>
                   <a href={`#${item.id}`} className="nav2__link">
-                    <i className={`bx ${item.icon} nav2__icon`}></i>
+                    <span className="nav2__icon">{item.icon}</span>
                     <span className="nav2__name">{item.label}</span>
                   </a>
                 </li>
@@ -87,20 +88,15 @@ const BottomNavbar2 = () => {
         </nav>
       </header>
 
-      {/* MAIN */}
       <main>
-        {["accueil", "profil", "atouts", "projets", "contact"].map(
-          (section) => (
-            <section
-              className="nav2__container nav2__section nav2__height"
-              id={section}
-              key={section}>
-              <h2 className="nav2__title">
-                {section.charAt(0).toUpperCase() + section.slice(1)}
-              </h2>
-            </section>
-          )
-        )}
+        {navItems.map((section) => (
+          <section
+            className="nav2__container nav2__section nav2__height"
+            id={section.id}
+            key={section.id}>
+            <h2 className="nav2__title">{section.label}</h2>
+          </section>
+        ))}
       </main>
     </div>
   );

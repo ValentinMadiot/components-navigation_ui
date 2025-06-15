@@ -1,4 +1,10 @@
 import { useEffect, useState } from "react";
+import {
+  RiCloseLine,
+  RiMenuLine,
+  RiSearchLine,
+  RiUserLine,
+} from "react-icons/ri";
 import { background } from "./assets/img/index";
 
 const SECTIONS = [
@@ -58,19 +64,15 @@ const NavbarMenu3 = ({ onOpenLogin, onOpenSearch }) => {
               ))}
             </ul>
             <div className="nav6__close" onClick={() => setMenuVisible(false)}>
-              <i className="ri-close-line"></i>
+              <RiCloseLine />
             </div>
           </div>
 
           <div className="nav6__actions">
-            <i
-              className="ri-search-line nav6__btn-search"
-              onClick={onOpenSearch}></i>
-            <i
-              className="ri-user-line nav6__btn-login"
-              onClick={onOpenLogin}></i>
+            <RiSearchLine className="nav6__btn-search" onClick={onOpenSearch} />
+            <RiUserLine className="nav6__btn-login" onClick={onOpenLogin} />
             <div className="nav6__toggle" onClick={() => setMenuVisible(true)}>
-              <i className="ri-menu-line"></i>
+              <RiMenuLine />
             </div>
           </div>
         </nav>

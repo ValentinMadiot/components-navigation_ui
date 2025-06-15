@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+/*=============== BASE ===============*/
 #nav7__body {
   position: relative;
   margin: 0;
@@ -10,7 +11,7 @@
   transition: 0.5s;
 }
 
-/*===== l NAV =====*/
+/*===== NAV =====*/
 .nav7 {
   position: fixed;
   top: 0;
@@ -24,7 +25,6 @@
   z-index: 100;
 }
 
-/*===== NAV =====*/
 .nav7__container {
   height: 100%;
   display: flex;

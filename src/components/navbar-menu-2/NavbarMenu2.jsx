@@ -1,11 +1,26 @@
 import { useEffect, useState } from "react";
+import {
+  RiApps2Line,
+  RiArrowDownSLine,
+  RiBookMarkLine,
+  RiCloseLine,
+  RiCodeLine,
+  RiCodeSSlashLine,
+  RiCommunityLine,
+  RiFilePaper2Line,
+  RiFlashlightLine,
+  RiHeart3Line,
+  RiMenuLine,
+  RiPenNibLine,
+  RiShieldLine,
+} from "react-icons/ri";
+
 import "./navbarMenu2.css";
 
 const NavbarMenu2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  // Ferme tous les dropdowns si la fenêtre est redimensionnée en desktop
   useEffect(() => {
     const onResize = () => {
       if (window.innerWidth >= 1118) {
@@ -24,7 +39,7 @@ const NavbarMenu2 = () => {
   const DropdownItem = ({ label, isOpen, onToggle, groups }) => (
     <li className={`nav5__dropdown-item ${isOpen ? "show-dropdown" : ""}`}>
       <div className="nav5__link nav5__dropdown-button" onClick={onToggle}>
-        {label} <i className="ri-arrow-down-s-line nav5__dropdown-arrow"></i>
+        {label} <RiArrowDownSLine className="nav5__dropdown-arrow" />
       </div>
       <div
         className="nav5__dropdown-container"
@@ -32,9 +47,7 @@ const NavbarMenu2 = () => {
         <div className="nav5__dropdown-content">
           {groups.map((group, index) => (
             <div className="nav5__dropdown-group" key={index}>
-              <div className="nav5__dropdown-icon">
-                <i className={group.icon}></i>
-              </div>
+              <div className="nav5__dropdown-icon">{group.icon}</div>
               <span className="nav5__dropdown-title">{group.title}</span>
               <ul className="nav5__dropdown-list">
                 {group.links.map((text, i) => (
@@ -58,14 +71,14 @@ const NavbarMenu2 = () => {
         <nav className="nav5 nav5__container">
           <div className="nav5__data">
             <a href="#" className="nav5__logo">
-              <i className="ri-code-s-slash-line"></i> Logo
+              <RiCodeSSlashLine /> Logo
             </a>
 
             <div
               className={`nav5__toggle ${menuOpen ? "show-icon" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}>
-              <i className="ri-menu-line nav5__toggle-menu"></i>
-              <i className="ri-close-line nav5__toggle-close"></i>
+              <RiMenuLine className="nav5__toggle-menu" />
+              <RiCloseLine className="nav5__toggle-close" />
             </div>
           </div>
 
@@ -84,7 +97,7 @@ const NavbarMenu2 = () => {
                 onToggle={() => toggleDropdown("decouvrir")}
                 groups={[
                   {
-                    icon: "ri-flashlight-line",
+                    icon: <RiFlashlightLine />,
                     title: "Cours les plus vus",
                     links: [
                       "HTML pour débutants",
@@ -93,7 +106,7 @@ const NavbarMenu2 = () => {
                     ],
                   },
                   {
-                    icon: "ri-heart-3-line",
+                    icon: <RiHeart3Line />,
                     title: "Cours populaires",
                     links: [
                       "Développement avec Flutter",
@@ -102,7 +115,7 @@ const NavbarMenu2 = () => {
                     ],
                   },
                   {
-                    icon: "ri-book-mark-line",
+                    icon: <RiBookMarkLine />,
                     title: "Métiers",
                     links: [
                       "Développement Web",
@@ -112,7 +125,7 @@ const NavbarMenu2 = () => {
                     ],
                   },
                   {
-                    icon: "ri-file-paper-2-line",
+                    icon: <RiFilePaper2Line />,
                     title: "Certifications",
                     links: ["Certificats de cours", "Certifications gratuites"],
                   },
@@ -126,12 +139,12 @@ const NavbarMenu2 = () => {
                 onToggle={() => toggleDropdown("ressources")}
                 groups={[
                   {
-                    icon: "ri-code-line",
+                    icon: <RiCodeLine />,
                     title: "Templates web",
                     links: ["Templates gratuits", "Templates premium"],
                   },
                   {
-                    icon: "ri-pen-nib-line",
+                    icon: <RiPenNibLine />,
                     title: "Designs",
                     links: [
                       "Designs web",
@@ -140,7 +153,7 @@ const NavbarMenu2 = () => {
                     ],
                   },
                   {
-                    icon: "ri-apps-2-line",
+                    icon: <RiApps2Line />,
                     title: "Autres",
                     links: [
                       "Articles récents",
@@ -164,12 +177,12 @@ const NavbarMenu2 = () => {
                 onToggle={() => toggleDropdown("entreprise")}
                 groups={[
                   {
-                    icon: "ri-community-line",
+                    icon: <RiCommunityLine />,
                     title: "À propos",
                     links: ["Qui sommes-nous", "Support", "Contact"],
                   },
                   {
-                    icon: "ri-shield-line",
+                    icon: <RiShieldLine />,
                     title: "Sécurité & qualité",
                     links: ["Cookies", "Confidentialité"],
                   },

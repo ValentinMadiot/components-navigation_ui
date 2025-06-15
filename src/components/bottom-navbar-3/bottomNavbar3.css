@@ -67,9 +67,6 @@
   color: hsl(228, 8%, 50%);
   font-weight: 500;
   transition: 0.3s;
-}
-
-.nav3__link i {
   font-size: 1.25rem;
 }
 
@@ -114,10 +111,11 @@
   }
   .nav3__logo {
     display: flex;
-  }
-  .nav3__logo i {
     font-size: 1.25rem;
     color: hsl(228, 81%, 49%);
+  }
+  .nav3__logo svg {
+    min-width: 1.25rem;
   }
   .nav3__logo-name {
     color: hsl(228, 12%, 15%);
@@ -147,10 +145,15 @@
     font-size: 1.2rem;
     display: grid;
     place-items: center;
-    top: 2rem;
+    top: 2.35rem;
     right: -10px;
     cursor: pointer;
     transition: 0.4s;
+  }
+  .nav3__toggle svg {
+    position: absolute;
+    top: 0.05rem;
+    left: 0.075em;
   }
 }
 
@@ -172,13 +175,13 @@
 
 /* For 2K & 4K resolutions */
 @media screen and (min-width: 2048px) {
-  body {
+  .nav3__body {
     zoom: 1.7;
   }
 }
 
 @media screen and (min-width: 3840px) {
-  body {
+  .nav3__body {
     zoom: 2.5;
   }
 }

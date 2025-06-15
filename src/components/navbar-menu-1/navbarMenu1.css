@@ -4,6 +4,7 @@
   font-family: "Montserrat", sans-serif;
   font-size: 0.938rem;
   background-color: hsl(220, 100%, 97%);
+  height: 100vh;
 }
 .nav4__container {
   max-width: 1120px;
@@ -48,8 +49,8 @@
   /*-webkit-tap-highlight-color: transparent;*/
 }
 
-.nav4__logo i {
-  font-weight: initial;
+.nav4__logo svg {
+  stroke-width: 0.5;
   font-size: 1.25rem;
 }
 
@@ -150,12 +151,13 @@
   column-gap: 0.5rem;
   font-weight: 600;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
-.nav4__dropdown-link i,
-.nav4__dropdown-sublink i {
+.nav4__dropdown-link svg,
+.nav4__dropdown-sublink svg {
+  stroke-width: 0.5;
   font-size: 1.25rem;
-  font-weight: initial;
 }
 
 .nav4__dropdown-link:hover,
@@ -216,7 +218,7 @@
   }
 
   .nav4 {
-    height: calc(3.5rem) + 2rem;
+    height: calc(3.5rem + 2rem);
     display: flex;
     justify-content: space-between;
   }

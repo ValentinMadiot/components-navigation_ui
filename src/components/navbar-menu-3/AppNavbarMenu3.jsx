@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RiCloseLine, RiSearchLine } from "react-icons/ri";
 import NavbarLogin3 from "./NavbarLogin3";
 import NavbarMenu3 from "./NavbarMenu3";
 import NavbarSignup3 from "./NavbarSignup3";
@@ -47,16 +48,17 @@ const App = () => {
           <form
             className="nav6__search-form"
             onClick={(e) => e.stopPropagation()}>
-            <i className="ri-search-line nav6__search-icon"></i>
+            <RiSearchLine className="nav6__search-icon" />
             <input
               type="search"
               placeholder="Que recherchez-vous ?"
               className="nav6__search-input"
             />
           </form>
-          <i
-            className="ri-close-line nav6__search-close"
-            onClick={() => setShowSearch(false)}></i>
+          <RiCloseLine
+            className="nav6__search-close"
+            onClick={() => setShowSearch(false)}
+          />
         </div>
       )}
     </>

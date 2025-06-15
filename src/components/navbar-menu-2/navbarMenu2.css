@@ -44,8 +44,9 @@
   transition: color 0.3s;
 }
 
-.nav5__logo i {
+.nav5__logo svg {
   font-size: 1.25rem;
+  stroke-width: 0.75;
 }
 
 .nav5__logo:hover {
@@ -54,8 +55,11 @@
 
 .nav5__toggle {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 19px;
+  height: 20px;
+}
+.nav5__toggle svg {
+  stroke-width: 0.75;
 }
 
 .nav5__toggle-menu,
@@ -130,6 +134,9 @@
 }
 
 /*=============== DROPDOWN ===============*/
+.nav5__dropdown-button svg {
+  stroke-width: 0.5;
+}
 .nav5__dropdown-button {
   cursor: pointer;
 }
@@ -294,7 +301,7 @@
     place-items: center;
     margin-bottom: 1rem;
   }
-  .nav5__dropdown-icon i {
+  .nav5__dropdown-icon svg {
     font-size: 2rem;
   }
   .nav5__dropdown-title {
