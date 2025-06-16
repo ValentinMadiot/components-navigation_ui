@@ -1,11 +1,11 @@
-// import AuthMenu from "../components/auth-menu/AuthMenu";
-// import ScrollToTopButton from "../components/scroll-button/ScrollToTopButton";
+import SideNavMenu from "../components/side-nav-menu/SideNavMenu";
 import TextReveal from "../components/text-reveal/TextReveal";
+// import ScrollToTopButton from "../components/scroll-button/ScrollToTopButton";
 
 const Home = () => (
   <section className="home" id="home">
     <TextReveal />
-    {/* <AuthMenu /> */}
+    <SideNavMenu />
     {/* <ScrollToTopButton /> */}
   </section>
 );

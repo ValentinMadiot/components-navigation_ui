@@ -217,7 +217,7 @@ const SidebarMenu2 = () => {
       {/* ====== CONTENU PRINCIPAL ====== */}
       <main>
         <section>
-          <p className="nav8__main-p">Retour</p>
+          <p className="nav8__main-p"></p>
         </section>
       </main>
     </div>
