@@ -74,17 +74,17 @@
 }
 
 /*Expander menu*/
-.expander {
+.nav7__expander {
   width: calc(92px + 9.25rem);
 }
 
 /*Active links menu*/
-.active {
+.nav7__active {
   background-color: #0c5df4;
 }
 
 /*===== COLLAPSE =====*/
-.collapse {
+.nav7__collapse {
   grid-template-columns: 20px max-content 1fr;
 }
 .nav7__collapse-link {
@@ -104,11 +104,11 @@
 }
 
 /*Show collapse*/
-.showCollapse {
+.nav7__showCollapse {
   display: block;
 }
 
 /*Rotate icon*/
-.rotate {
+.nav7__rotate {
   transform: rotate(180deg);
 }

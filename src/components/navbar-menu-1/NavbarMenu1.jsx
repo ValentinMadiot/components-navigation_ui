@@ -23,8 +23,8 @@ const NavbarMenu1 = () => {
     const nav = document.getElementById("nav-menu");
 
     const showMenu = () => {
-      nav.classList.toggle("show-menu");
-      toggle.classList.toggle("show-icon");
+      nav.classList.toggle("nav4__show-menu");
+      toggle.classList.toggle("nav4__show-icon");
     };
 
     if (toggle) {

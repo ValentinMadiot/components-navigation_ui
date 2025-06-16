@@ -78,7 +78,7 @@ const SidebarMenu2 = () => {
 
       {/* ====== NAVIGATION ====== */}
       <div
-        className={`nav8 ${showMenu ? "show-menu" : ""}`}
+        className={`nav8 ${showMenu ? "nav8__show-menu" : ""}`}
         id="navbar"
         ref={navbarRef}>
         <nav className="nav8__container">
@@ -95,7 +95,7 @@ const SidebarMenu2 = () => {
                 <a
                   href="#"
                   className={`nav8__link ${
-                    activeLink === "accueil" ? "active" : ""
+                    activeLink === "accueil" ? "nav8__active" : ""
                   }`}
                   onClick={() => handleLinkClick("accueil")}>
                   <BiHome className="nav8__icon" />
@@ -106,7 +106,7 @@ const SidebarMenu2 = () => {
                   <a
                     href="#"
                     className={`nav8__link ${
-                      activeLink === "profil" ? "active" : ""
+                      activeLink === "profil" ? "nav8__active" : ""
                     }`}
                     onClick={() => handleDropdownToggle("profil")}>
                     <BiUser className="nav8__icon" />
@@ -116,7 +116,7 @@ const SidebarMenu2 = () => {
 
                   <div
                     className={`nav8__dropdown-collapse ${
-                      openDropdown === "profil" ? "show" : ""
+                      openDropdown === "profil" ? "nav8__show-dropdown" : ""
                     }`}>
                     <div className="nav8__dropdown-content">
                       <a href="#" className="nav8__dropdown-item">
@@ -135,7 +135,7 @@ const SidebarMenu2 = () => {
                 <a
                   href="#"
                   className={`nav8__link ${
-                    activeLink === "messages" ? "active" : ""
+                    activeLink === "messages" ? "nav8__active" : ""
                   }`}
                   onClick={() => handleLinkClick("messages")}>
                   <BiMessageRounded className="nav8__icon" />
@@ -150,7 +150,7 @@ const SidebarMenu2 = () => {
                   <a
                     href="#"
                     className={`nav8__link ${
-                      activeLink === "notifications" ? "active" : ""
+                      activeLink === "notifications" ? "nav8__active" : ""
                     }`}
                     onClick={() => handleDropdownToggle("notifications")}>
                     <BiBell className="nav8__icon" />
@@ -160,7 +160,9 @@ const SidebarMenu2 = () => {
 
                   <div
                     className={`nav8__dropdown-collapse ${
-                      openDropdown === "notifications" ? "show" : ""
+                      openDropdown === "notifications"
+                        ? "nav8__show-dropdown"
+                        : ""
                     }`}>
                     <div className="nav8__dropdown-content">
                       <a href="#" className="nav8__dropdown-item">
@@ -182,7 +184,7 @@ const SidebarMenu2 = () => {
                 <a
                   href="#"
                   className={`nav8__link ${
-                    activeLink === "explorer" ? "active" : ""
+                    activeLink === "explorer" ? "nav8__active" : ""
                   }`}
                   onClick={() => handleLinkClick("explorer")}>
                   <BiCompass className="nav8__icon" />
@@ -192,7 +194,7 @@ const SidebarMenu2 = () => {
                 <a
                   href="#"
                   className={`nav8__link ${
-                    activeLink === "enregistres" ? "active" : ""
+                    activeLink === "enregistres" ? "nav8__active" : ""
                   }`}
                   onClick={() => handleLinkClick("enregistres")}>
                   <BiBookmark className="nav8__icon" />
@@ -205,7 +207,7 @@ const SidebarMenu2 = () => {
           <a
             href="#"
             className={`nav8__link nav8__logout ${
-              activeLink === "deconnexion" ? "active" : ""
+              activeLink === "deconnexion" ? "nav8__active" : ""
             }`}
             onClick={() => handleLinkClick("deconnexion")}>
             <BiLogOut className="nav8__icon" />

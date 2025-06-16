@@ -22,8 +22,8 @@ const BottomNavbar3 = () => {
 
     if (toggle && nav) {
       const handleToggle = () => {
-        nav.classList.toggle("show-menu");
-        toggle.classList.toggle("rotate-icon");
+        nav.classList.toggle("nav3__show-menu");
+        toggle.classList.toggle("nav3__rotate-icon");
       };
       toggle.addEventListener("click", handleToggle);
       return () => toggle.removeEventListener("click", handleToggle);
@@ -37,9 +37,9 @@ const BottomNavbar3 = () => {
           if (entry.isIntersecting) {
             const activeId = entry.target.id;
             linksRef.current.forEach((link) => {
-              link.classList.remove("active-link");
+              link.classList.remove("nav3__active-link");
               if (link.getAttribute("href") === `#${activeId}`) {
-                link.classList.add("active-link");
+                link.classList.add("nav3__active-link");
               }
             });
           }

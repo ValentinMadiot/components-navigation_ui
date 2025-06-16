@@ -48,14 +48,14 @@ const NavbarMenu3 = ({ onOpenLogin, onOpenSearch }) => {
             Logo
           </a>
 
-          <div className={`nav6__menu ${menuVisible ? "show-menu" : ""}`}>
+          <div className={`nav6__menu ${menuVisible ? "nav6__show-menu" : ""}`}>
             <ul className="nav6__list">
               {SECTIONS.map(({ id, label }) => (
                 <li className="nav6__item" key={id}>
                   <a
                     href={`#${id}`}
                     className={`nav6__link ${
-                      activeLink === id ? "active-link" : ""
+                      activeLink === id ? "nav6__active-link" : ""
                     }`}
                     onClick={() => setMenuVisible(false)}>
                     {label}

@@ -26,9 +26,9 @@ const BottomNavbar2 = () => {
 
         if (navLink) {
           if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLink.classList.add("active-link");
+            navLink.classList.add("nav2__active-link");
           } else {
-            navLink.classList.remove("active-link");
+            navLink.classList.remove("nav2__active-link");
           }
         }
       });
@@ -37,9 +37,9 @@ const BottomNavbar2 = () => {
     const scrollHeader = () => {
       const header = document.getElementById("header");
       if (window.scrollY >= 80) {
-        header.classList.add("scroll-header");
+        header.classList.add("nav2__scroll-header");
       } else {
-        header.classList.remove("scroll-header");
+        header.classList.remove("nav2__scroll-header");
       }
     };
 

@@ -52,7 +52,7 @@ const SidebarMenu1 = () => {
   return (
     <div id="nav7__body" className={estOuvert ? "nav7__body" : ""}>
       <div
-        className={`nav7 ${estOuvert ? "expander" : ""}`}
+        className={`nav7 ${estOuvert ? "nav7__expander" : ""}`}
         id="navbar"
         ref={refSidebar}>
         <nav className="nav7__container">
@@ -72,7 +72,7 @@ const SidebarMenu1 = () => {
               <a
                 href="#"
                 className={`nav7__link ${
-                  lienActif === "dashboard" ? "active" : ""
+                  lienActif === "dashboard" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererClicLien("dashboard")}>
                 <IoHomeOutline className="nav7__icon" />
@@ -82,7 +82,7 @@ const SidebarMenu1 = () => {
               <a
                 href="#"
                 className={`nav7__link ${
-                  lienActif === "messenger" ? "active" : ""
+                  lienActif === "messenger" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererClicLien("messenger")}>
                 <IoChatbubblesOutline className="nav7__icon" />
@@ -90,20 +90,20 @@ const SidebarMenu1 = () => {
               </a>
 
               <div
-                className={`nav7__link collapse ${
-                  lienActif === "projects" ? "active" : ""
+                className={`nav7__link nav7__collapse ${
+                  lienActif === "projects" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererToggleMenu("projects")}>
                 <IoFolderOutline className="nav7__icon" />
                 <span className="nav7__name">Projets</span>
                 <IoChevronDownOutline
                   className={`nav7__collapse-link ${
-                    menuOuvert === "projects" ? "rotate" : ""
+                    menuOuvert === "projects" ? "nav7__rotate" : ""
                   }`}
                 />
                 <ul
                   className={`nav7__collapse-menu ${
-                    menuOuvert === "projects" ? "showCollapse" : ""
+                    menuOuvert === "projects" ? "nav7__showCollapse" : ""
                   }`}>
                   <li>
                     <a
@@ -141,7 +141,7 @@ const SidebarMenu1 = () => {
               <a
                 href="#"
                 className={`nav7__link ${
-                  lienActif === "analytics" ? "active" : ""
+                  lienActif === "analytics" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererClicLien("analytics")}>
                 <IoPieChartOutline className="nav7__icon" />
@@ -149,20 +149,20 @@ const SidebarMenu1 = () => {
               </a>
 
               <div
-                className={`nav7__link collapse ${
-                  lienActif === "team" ? "active" : ""
+                className={`nav7__link nav7__collapse ${
+                  lienActif === "team" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererToggleMenu("team")}>
                 <IoPeopleOutline className="nav7__icon" />
                 <span className="nav7__name">Équipe</span>
                 <IoChevronDownOutline
                   className={`nav7__collapse-link ${
-                    menuOuvert === "team" ? "rotate" : ""
+                    menuOuvert === "team" ? "nav7__rotate" : ""
                   }`}
                 />
                 <ul
                   className={`nav7__collapse-menu ${
-                    menuOuvert === "team" ? "showCollapse" : ""
+                    menuOuvert === "team" ? "nav7__showCollapse" : ""
                   }`}>
                   <li>
                     <a
@@ -194,7 +194,7 @@ const SidebarMenu1 = () => {
               <a
                 href="#"
                 className={`nav7__link ${
-                  lienActif === "settings" ? "active" : ""
+                  lienActif === "settings" ? "nav7__active" : ""
                 }`}
                 onClick={() => gererClicLien("settings")}>
                 <IoSettingsOutline className="nav7__icon" />
@@ -205,7 +205,9 @@ const SidebarMenu1 = () => {
 
           <a
             href="#"
-            className={`nav7__link ${lienActif === "logout" ? "active" : ""}`}
+            className={`nav7__link ${
+              lienActif === "logout" ? "nav7__active" : ""
+            }`}
             onClick={() => gererClicLien("logout")}>
             <IoLogOutOutline className="nav7__icon" />
             <span className="nav7__name">Déconnexion</span>

@@ -99,5 +99,11 @@ img {
   text-align: center;
   padding: 2rem;
   background-color: #0d1117;
-  /* gap: 8rem; */
+  gap: 5rem;
+}
+
+@media screen and (max-width: 670px) {
+  .home {
+    gap: 3rem;
+  }
 }

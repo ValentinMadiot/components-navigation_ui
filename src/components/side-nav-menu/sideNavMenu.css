@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5rem;
-  padding: 5rem 0 5rem;
+  padding-bottom: 4rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -19,7 +19,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0rem;
-    padding: 3rem 0 0;
+    padding-bottom: 0rem;
   }
 }
 
@@ -48,15 +48,19 @@
   height: 3rem;
   border-radius: 0.5rem;
   font-size: 1.2rem;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 8%);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.05);
 }
 
 .nav-section a:hover {
-  color: hsl(230, 75%, 56%);
+  background-color: hsl(230, 75%, 56%);
+  color: hsl(0, 0%, 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px hsla(230, 75%, 56%, 0.2);
 }
 
 /* @media screen and (min-width: 768px) {

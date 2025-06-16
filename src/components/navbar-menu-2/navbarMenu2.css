@@ -116,19 +116,19 @@
 }
 
 /* Show menu */
-.show-menu {
+.nav5__show-menu {
   opacity: 1;
   top: 3.5rem;
   pointer-events: initial;
 }
 
 /* Show icon */
-.show-icon .nav5__toggle-menu {
+.nav5__show-icon .nav5__toggle-menu {
   opacity: 0;
   transform: rotate(90deg);
 }
 
-.show-icon .nav5__toggle-close {
+.nav5__show-icon .nav5__toggle-close {
   opacity: 1;
   transform: rotate(90deg);
 }
@@ -204,7 +204,7 @@
 }
 
 /* Rotate dropdown icon */
-.show-dropdown .nav5__dropdown-arrow {
+.nav5__show-dropdown .nav5__dropdown-arrow {
   transform: rotate(180deg);
 }
 

@@ -23,7 +23,7 @@ const SidebarMenu3 = () => {
             <a
               href="#"
               className={`nav9__link ${
-                activeLink === "accueil" ? "active-link" : ""
+                activeLink === "accueil" ? "nav9__active-link" : ""
               }`}
               onClick={() => handleClick("accueil")}>
               <RiDashboard3Line />
@@ -35,7 +35,7 @@ const SidebarMenu3 = () => {
             <a
               href="#"
               className={`nav9__link ${
-                activeLink === "comptes" ? "active-link" : ""
+                activeLink === "comptes" ? "nav9__active-link" : ""
               }`}
               onClick={() => handleClick("comptes")}>
               <RiAccountBoxLine />
@@ -47,7 +47,7 @@ const SidebarMenu3 = () => {
             <a
               href="#"
               className={`nav9__link ${
-                activeLink === "investissements" ? "active-link" : ""
+                activeLink === "investissements" ? "nav9__active-link" : ""
               }`}
               onClick={() => handleClick("investissements")}>
               <RiRocketLine />
@@ -59,7 +59,7 @@ const SidebarMenu3 = () => {
             <a
               href="#"
               className={`nav9__link ${
-                activeLink === "fichiers" ? "active-link" : ""
+                activeLink === "fichiers" ? "nav9__active-link" : ""
               }`}
               onClick={() => handleClick("fichiers")}>
               <RiFileList3Line />
@@ -71,7 +71,7 @@ const SidebarMenu3 = () => {
             <a
               href="#"
               className={`nav9__link ${
-                activeLink === "parametres" ? "active-link" : ""
+                activeLink === "parametres" ? "nav9__active-link" : ""
               }`}
               onClick={() => handleClick("parametres")}>
               <RiSettings3Line />

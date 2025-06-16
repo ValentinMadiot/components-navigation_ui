@@ -105,14 +105,14 @@
 }
 
 /*Active link*/
-.active-link {
+.nav2__active-link {
   position: relative;
   color: hsl(174, 63%, 40%);
   transition: 0.3s;
 }
 
 /* Minimalist design, active link */
-/* .active-link::before{
+/* .nav2__active-link::before{
   content: '';
   position: absolute;
   bottom: -.5rem;
@@ -123,7 +123,7 @@
 } */
 
 /* Change background header */
-.scroll-header {
+.nav2__scroll-header {
   box-shadow: 0 1px 12px hsla(174, 63%, 15%, 0.15);
 }
 
@@ -169,7 +169,7 @@
   }
 
   /* First design, remove if you choose the minimalist design */
-  .active-link::before {
+  .nav2__active-link::before {
     content: "";
     position: absolute;
     bottom: -0.75rem;
@@ -180,7 +180,7 @@
   }
 
   /* Minimalist design */
-  /* .active-link::before{
+  /* .nav2__active-link::before{
       bottom: -.75rem;
   } */
 }

@@ -190,6 +190,7 @@
 }
 
 /* Show dropdown collapse */
+.nav8__show-dropdown,
 .nav8__dropdown:hover {
   max-height: 100rem;
 }
@@ -200,12 +201,12 @@
 }
 
 /*===== Show menu =====*/
-.show-menu {
+.nav8__show-menu {
   left: 0;
 }
 
 /*===== Active link =====*/
-.active {
+.nav8__active {
   color: #6923d0;
 }
 

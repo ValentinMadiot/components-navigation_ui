@@ -162,7 +162,7 @@
   transition: color 0.4s;
 }
 
-.active-link {
+.nav6__active-link {
   /* position: relative; */
   color: hsl(230, 75%, 56%);
   transition: 0.3s;
@@ -175,7 +175,7 @@
 }
 
 /* Show menu */
-.show-menu {
+.nav6__show-menu {
   top: 0;
 }
 

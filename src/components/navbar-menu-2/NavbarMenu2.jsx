@@ -37,7 +37,8 @@ const NavbarMenu2 = () => {
   };
 
   const DropdownItem = ({ label, isOpen, onToggle, groups }) => (
-    <li className={`nav5__dropdown-item ${isOpen ? "show-dropdown" : ""}`}>
+    <li
+      className={`nav5__dropdown-item ${isOpen ? "nav5__show-dropdown" : ""}`}>
       <div className="nav5__link nav5__dropdown-button" onClick={onToggle}>
         {label} <RiArrowDownSLine className="nav5__dropdown-arrow" />
       </div>
@@ -75,14 +76,14 @@ const NavbarMenu2 = () => {
             </a>
 
             <div
-              className={`nav5__toggle ${menuOpen ? "show-icon" : ""}`}
+              className={`nav5__toggle ${menuOpen ? "nav5__show-icon" : ""}`}
               onClick={() => setMenuOpen(!menuOpen)}>
               <RiMenuLine className="nav5__toggle-menu" />
               <RiCloseLine className="nav5__toggle-close" />
             </div>
           </div>
 
-          <div className={`nav5__menu ${menuOpen ? "show-menu" : ""}`}>
+          <div className={`nav5__menu ${menuOpen ? "nav5__show-menu" : ""}`}>
             <ul className="nav5__list">
               <li>
                 <a href="#" className="nav5__link">

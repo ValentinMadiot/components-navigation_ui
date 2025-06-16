@@ -75,7 +75,7 @@
 }
 
 /* Active link */
-.active-link {
+.nav3__active-link {
   color: hsl(228, 81%, 49%);
 }
 
@@ -158,12 +158,12 @@
 }
 
 /* Show menu */
-.show-menu {
+.nav3__show-menu {
   width: 255px;
 }
 
 /* Rotate toggle icon */
-.rotate-icon {
+.nav3__rotate-icon {
   transform: rotate(180deg);
 }
 
