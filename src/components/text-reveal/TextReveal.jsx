@@ -5,7 +5,7 @@ import "./textReveal.css";
 function TextReveal() {
   const headingChars = regexString("Composants de Navigation");
   const textChars = regexString(
-    "Découvrez différentes interfaces pour naviguer dans vos apps"
+    "Découvrez différentes interfaces de navigation"
   );
 
   const charVariants = {
