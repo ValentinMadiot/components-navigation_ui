@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import "./sideNavMenu.css";
+import "./NavButton.css";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -18,7 +18,7 @@ const linkVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeInOut" } },
 };
 
-const SideNavMenu = () => {
+const NavButton = () => {
   return (
     <motion.div
       className="side-nav-menu"
@@ -76,4 +76,4 @@ const SideNavMenu = () => {
   );
 };
 
-export default SideNavMenu;
+export default NavButton;
