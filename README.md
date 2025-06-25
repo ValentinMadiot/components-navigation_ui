@@ -15,7 +15,7 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Ce projet React regroupe 9 barres de navigation modernes divisées en 3 catégories :
+Ce projet React propose 9 barres de navigation modernes réparties en 3 catégories :
 
 - Barre du Haut : Menu principal en haut de page
 - Barre Latérale : Menu latéral fixe ou déroulant
@@ -25,42 +25,47 @@ Chaque composant est conçu pour être responsive, modulaire et facilement inté
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
 
-- React 18 + Vite pour un développement rapide
+- React 18 + Vite
 - React Router DOM + React Icons
 - CSS natif modulaire (1 fichier par composant)
 - Hooks React : `useState`, `useEffect`, `useRef`
 - Convention BEM : `navX__element`
-- Déploiement sur [Vercel](https://components-navigation.vercel.app/)
+- Déploiement sur [**Vercel**](https://components-navigation.vercel.app/)
 
 ## <br /> <a name="fonctionnalités">🎯 Fonctionnalités</a>
 
 - 9 composants de navigation répartis par type
-- Responsive mobile/desktop avec points de rupture optimisés
-- Gestion de dropdowns, sous-menus et toggles
-- Effets de transition et animations CSS
+- Design responsive (mobile & desktop)
+- Menus déroulants, sous-menus, toggles dynamiques
+- Transitions CSS fluides & comportement actif intelligent
 - Comportements dynamiques (menus actifs, fermeture auto, etc.)
-- Système de routage vers chaque variation avec un bouton de retour
+- Routage intégré avec bouton de retour
+- Composants prêts à l’emploi pour tout type de layout
 
 ## <br /> <a name="installation">🚀 Installation</a>
 
-### ✅ Pré-requis
+### ✅ Prérequis
 
-- 🛠️ **[Git](https://git-scm.com/)**
-- 🔧 **[Node.js](https://nodejs.org/fr/)**
-- 📦 **[npm](https://www.npmjs.com/)**
+- [Git](https://git-scm.com/) &nbsp;—&nbsp; Système de gestion de versions
+- [Node.js](https://nodejs.org/fr) &nbsp;—&nbsp; Exécuteur local de scripts JavaScript
+- [npm](https://www.npmjs.com/) &nbsp;—&nbsp; Gestionnaire de paquets JavaScript
+- [Google Chrome](https://www.google.com/) &nbsp;—&nbsp; Navigateur moderne
+- [Visual Studio Code](https://code.visualstudio.com/) &nbsp;—&nbsp; Éditeur de code
 
 ### 📥 Cloner le projet
 
 ```bash
-git clone https://github.com/ValentinMadiot/components-navigation_ui.git
+git clone https://github.com/ValentinMadiot/components-navigation_ui
 ```
 
-### ▶️ Lancer l’application
+### ▶️ Lancer le projet
 
-#### Frontend (port : 5173)
+#### Frontend
 
 ```bash
 cd components-navigation_ui
 npm install
 npm run dev
 ```
+
+Frontend disponible sur : `http://localhost:5173`
