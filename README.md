@@ -56,6 +56,7 @@ Chaque composant est conçu pour être responsive, modulaire et facilement inté
 
 ```bash
 git clone https://github.com/ValentinMadiot/components-navigation_ui
+cd components-navigation_ui
 ```
 
 ### ▶️ Lancer le projet
@@ -63,7 +64,6 @@ git clone https://github.com/ValentinMadiot/components-navigation_ui
 #### Frontend
 
 ```bash
-cd components-navigation_ui
 npm install
 npm run dev
 ```
